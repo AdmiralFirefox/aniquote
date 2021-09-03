@@ -1,0 +1,138 @@
+@use "./variables" as theme-var;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2em 0em;
+    background: theme-var.$black-background-color;
+    width: min(80%, 50em);
+    padding: 2em 1.7em 1.5em 1.7em;
+    border-radius: 10px;
+
+    //Title
+    .main-title {
+      font-family: "Dancing Script", cursive;
+      font-weight: bold;
+      font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+      color: theme-var.$white-font-color;
+    }
+
+    //Subtitle
+    .main-subtitle {
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      margin-top: 0.25em;
+      color: theme-var.$white-font-color;
+      width: min(100%, 20em);
+    }
+
+    //Button
+    .main-button {
+      width: 100%;
+
+      button {
+        margin-top: 1.8em;
+        padding: 0.75em 1.5em;
+        background: theme-var.$white-background-color;
+        color: theme-var.$black-font-color;
+        transition: background 0.35s ease-in-out;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 0.9rem;
+        width: min(85%, 25em);
+
+        &:hover {
+          background: theme-var.$white-background-color-hover;
+        }
+      }
+    }
+
+    //Loading Wrapper
+    .loading-wrapper {
+      margin-top: 1.5em;
+
+      .loading-content {
+        color: theme-var.$white-font-color;
+        font-size: 1.4rem;
+      }
+    }
+
+    //Error
+    .error {
+      color: theme-var.$white-font-color;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+      margin-top: 1.5em;
+    }
+
+    //Quote Icon
+    .quote-icon {
+      margin-top: 0.3em;
+      color: theme-var.$white-font-color;
+      font-size: 2.7rem;
+      user-select: none;
+    }
+
+    //Quote
+    .anime-quote {
+      margin-top: 0.2em;
+      color: theme-var.$white-font-color;
+      font-size: clamp(1.3rem, 1.7vw, 1.7rem);
+      font-weight: 600;
+    }
+
+    //Character
+    .anime-character {
+      color: theme-var.$white-font-color;
+      margin-top: 1.5em;
+      font-size: clamp(1.4rem, 1.7vw, 1.7rem);
+      font-style: italic;
+    }
+
+    //Anime Name
+    .anime-name {
+      color: theme-var.$gray-font-color;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+}
+
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  .main-wrapper {
+    .main-content {
+      //Title
+      .main-title {
+        font-size: 3rem;
+      }
+
+      //Subtitle
+      .main-subtitle {
+        font-size: 1.5rem;
+      }
+
+      //Error
+      .error {
+        font-size: 0.8rem;
+      }
+
+      //Quote
+      .anime-quote {
+        font-size: 1.3rem;
+      }
+
+      //Character
+      .anime-character {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
