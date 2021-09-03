@@ -9,10 +9,13 @@
   align-items: center;
   text-align: center;
   margin: 2em 0em;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   width: min(80%, 50em);
   padding: 2em 1.7em 1.5em 1.7em;
   border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .main-wrapper .main-content .main-title {
   font-family: "Dancing Script", cursive;
