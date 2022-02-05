@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Axios from "axios";
 import Loader from "react-loader-spinner";
+import { FaQuoteRight } from "react-icons/fa";
+import { IconContext } from "react-icons";
 import mainStyles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -55,9 +57,11 @@ export default function Home() {
             {anime.quote === "" ? (
               ""
             ) : (
-              <div className={mainStyles["quote-icon"]}>
-                <i className="fas fa-quote-right"></i>
-              </div>
+              <IconContext.Provider
+                value={{ className: mainStyles["quote-icon"] }}
+              >
+                <FaQuoteRight />
+              </IconContext.Provider>
             )}
             <p className={mainStyles["anime-quote"]}>{anime.quote}</p>
             <h2 className={mainStyles["anime-character"]}>{anime.character}</h2>
