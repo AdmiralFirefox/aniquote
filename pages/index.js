@@ -19,7 +19,7 @@ export default function Home() {
   const generateQuote = async () => {
     setLoading(true);
     try {
-      const res = await Axios.get("https://animechan.vercel.app/api/random");
+      const res = await Axios.get("https://animechan.xyz/api/random");
       // console.log(res.data);
       setAnime(res.data);
       setLoading(false);
